@@ -1,0 +1,108 @@
+    def feed_backwards(s,Y,output,function=None):
+        params,out = output
+        scores     = out
+        d_wb       = []
+        N          = params[0].activated.shape
+
+        scores_max = np.max(scores,axis=1,keepdims=True)
+        exp_scores = np.exp(scores - scores_max)
+        prob       = exp_scores / np.sum(exp_scores,axis=1,keepdims=True)
+
+        correct_logprobs = -np.log(probs[range(N)]
+                                   , Y)
+
+        data_loss = np.sum(correct_logprobs)/N
+
+        dscores   = probs
+
+        dscores[range(N),Y] -= 1
+        dscores /= N
+        grad     = []
+        prod     = lambda:np.dot(params[-x].activated.T,dscores)
+
+        for x in range(1,len(s._layers)-1):
+            dw = np.dot()
+            db = np.sum(dscores,axis=0,keepdims=True)
+
+            errors.append(error)
+            d_wb.append(
+                (dw:=np.outer(error, params[last-1-x].activated),
+                 np.sum(error)
+                 )
+            )
+            dh = np.dot(dscores,W2)
+            # prod = lambda:np.dot(s._layers[last-x+1].weights.T,error)
+            prod = lambda:np.dot(params[last-x].activated.T,error)
+
+        return d_wb,errors
+
+    # def backwards(s, Y, output, function=None):
+    #     # global [c]
+    #     params,out = output
+    #     # c[0] -= 0.0001
+    #
+    #
+    #
+    #     # loss = (Y-out)-(params[-1].biased)
+    #     # lossdiv = Y/params[-1].dotted
+    #     # # print(Y-out,Y,out)
+    #     # v = s._layers[-1].weights.T[:]
+    #     #
+    #     # wd = (v/(v*lossdiv))
+    #     # # print(s._layers[-1].weights.T[:].shape, 'b')
+    #     #
+    #     # s._layers[-1].weights.T[:] *= lossdiv
+    #     # s._layers[-1].bias += loss
+    #
+    #     # s._layers[-2].weights.T[:] *= wd
+    #
+    #     # print(s._layers[-2].bias, 's')
+    #
+    #     #
+    #
+    #     # print(s._layers[-1].weights.T[:].shape,'a')
+    #     # print(c)
+    #
+    #
+    #
+    #     # s._layers[-1].bias += loss
+    #     # print(s._layers[-1].weights.T.shape)
+
+    #
+    # def batch_train(s,X,Y):
+    #     DATA = [s.feed_forward(X[x],Y[x]) for x in range(len(X))]
+    #
+    #
+
+
+
+
+    # def Adam(s,derivative):
+    #     ...
+    #
+    #     x = bounds[:, 0] + rand(len(bounds)) * (bounds[:, 1] - bounds[:, 0])
+    #     score = objective(x[0], x[1])
+    #
+    #     m = np.zeros(bounds.shape[0])
+    #     v = np.zeros(bounds.shape[0])
+    #
+    #     for t in range(n_iter):
+    #         g = derivative(x[0], x[1])
+    #         for i in range(x.shape[0]):
+    #             # m(t) = beta1 * m(t-1) + (1 - beta1) * g(t)
+    #             m[i] = beta1 * m[i] + (1.0 - beta1) * g[i]
+    #             # v(t) = beta2 * v(t-1) + (1 - beta2) * g(t)^2
+    #             v[i] = beta2 * v[i] + (1.0 - beta2) * g[i] ** 2
+    #             # mhat(t) = m(t) / (1 - beta1(t))
+    #             mhat = m[i] / (1.0 - beta1 ** (t + 1))
+    #             # vhat(t) = v(t) / (1 - beta2(t))
+    #             vhat = v[i] / (1.0 - beta2 ** (t + 1))
+    #             # x(t) = x(t-1) - alpha * mhat(t) / (sqrt(vhat(t)) + eps)
+    #             x[i] = x[i] - alpha * mhat / (np.sqrt(vhat) + eps)
+    #         # evaluate candidate point
+    #         score = objective(x[0], x[1])
+    #         # report progress
+    #         print('>%d f(%s) = %.5f' % (t, x, score))
+    #     return [x, score]
+    #
+    #
