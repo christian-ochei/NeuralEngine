@@ -1,6 +1,6 @@
 # Nural
 
-#### Nural is A small Deep learning framework I built for fast Neural Network creation and evaluation. This framework is built arround numpy in order to aid fast CPU compute
+#### Nural is a small Deep learning framework I built for fast Neural Network creation and evaluation. This framework is built arround numpy in order to aid fast CPU compute
 
 #
 
@@ -39,6 +39,6 @@ python main.py
 
 ### Contributions
 
-#### This project is very much open contributions. Feel free to report any bugs
+#### This project is very much open contributions. Feel free to report bugs.
 
 #
