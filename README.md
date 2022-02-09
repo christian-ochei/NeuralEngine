@@ -8,6 +8,7 @@
 
 ```python
 
+from nuralengine import Layer
 import nuralengine
 import numpy
 
