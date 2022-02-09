@@ -37,3 +37,8 @@ python main.py
 
 
 
+### Contributions
+
+#### This project is very much open contributions. Feel free to report any bugs
+
+#
