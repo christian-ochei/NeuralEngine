@@ -44,7 +44,6 @@ des[gen[np.random.uniform(-1, 1, 5)]] = 0
 
 ```
 python main.py
-
 ```
 
 
