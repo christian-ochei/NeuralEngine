@@ -24,6 +24,17 @@ model[numpy.random.randn(40)] = numpy.ones(2)
 
 ```
 
+Nural also has a simple and elegant notation for Adverserial Networks
+
+```python
+with Adverserial(gen):
+    # G(X) must be tuned for D(G(X)) == 1
+    gen[np.random.uniform(-1,1,5)] &= des,1
+
+des[gen[np.random.uniform(-1, 1, 5)]] = 0
+    
+```
+
 ###
 
 
