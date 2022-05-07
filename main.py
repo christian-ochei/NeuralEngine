@@ -36,7 +36,5 @@ for _ in range(100):
     model[numpy.random.randn(40)] = numpy.ones(2) #
     # equivalent square(model(numpy.random.randn(40)) - numpy.ones(40)).mean().backward().step()
 
-
-with model.adv
 print(model[numpy.random.randn(40)])
 
