@@ -1,4 +1,4 @@
-from nuralengine import Network,Layer,MSE,sigmoid
+from neuralengine import Network,Layer,MSE,sigmoid
 
 # From my Pygame GitHub page
 from Pygame import *
