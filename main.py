@@ -1,12 +1,12 @@
-import nuralengine
+import neuralengine
 import numpy
 import torch
-from nuralengine import Layer
+from neuralengine import Layer
 
 
-model = nuralengine.Network([
+model = neuralengine.Network([
     Layer.Input(40),
-    Layer.Dense(42,activation=nuralengine.sigmoid),
+    Layer.Dense(42,activation=neuralengine.sigmoid),
     Layer.Dense(100),
     Layer.Dense(20),
     Layer.Dense(2)])
