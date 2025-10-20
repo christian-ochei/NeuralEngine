@@ -1,6 +1,6 @@
-# Nural
+# NeuralEngine
 
-#### Nural is a small Deep learning framework I built for fast Neural Network creation and evaluation. This framework is built around numpy in order to aid fast CPU compute
+#### NeuralEngine is a small Deep learning framework I built for fast Neural Network creation and evaluation. This framework is built around numpy in order to aid fast CPU compute
 
 #
 
@@ -8,13 +8,13 @@
 
 ```python
 
-from nuralengine import Layer
-import nuralengine
+from neuralengine import Layer
+import neuralengine
 import numpy
 
-model = nuralengine.Network([
+model = neuralengine.Network([
     Layer.Input(40),
-    Layer.Dense(42,activation=nuralengine.sigmoid),
+    Layer.Dense(42,activation=neuralengine.sigmoid),
     Layer.Dense(100),
     Layer.Dense(20),
     Layer.Dense(2)])
@@ -24,7 +24,7 @@ model[numpy.random.randn(40)] = numpy.ones(2)
 
 ```
 
-Nural also has a simple and elegant notation for Adverserial Networks
+Neural also has a simple and elegant notation for Adverserial Networks
 
 ```python
 with Adverserial(gen):
